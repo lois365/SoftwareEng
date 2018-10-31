@@ -1,18 +1,22 @@
 package se;
 
-import org.joda.time.DateTime;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class test {
 
-	private student s;
-	private DateTime d;
+public class test {
 	
-	public test() {
-		d = new DateTime();
-		s = new student ("lois", 22, "24/10/1995");
+	
+	public void testGetUserName() {
+		student student = new student("lois", 22, "24/10/1995");
+		String expected = student.getUsername();
+		assertEquals(expected, "lois22");	
 	}
-	public void hey() {
-		String username = s.getUsername();
+
+	private void assertEquals(String expected, String string) {
+		// TODO Auto-generated method stub
+		
 	}
+
+
 }
